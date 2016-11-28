@@ -6,21 +6,22 @@
 #include<stdio.h>
 
 //Create a new node
-struct Node {
+typedef struct Node {
 	int data;
 	struct Node* next;
-}
+} Node;
 
 struct Node *head; //Assign head as start of linked list
 
-void insert(int index, union Data data) {
-	Node* curr = new Node();
+void insert(int index, int data) { //union Data data) {
+	Node* curr;
+	curr = 0;
 	Node* newNode;
-	newNode.data; 
+	//newNode.data; 
 
 //initialize current pointer to head
 int i = 0; //start at first element in linked list and traverse
-curr = head;
+curr = &head;
 if(head != NULL) { //as long as there is a linked list
 	while(curr->next !=NULL && i !=index) {
 		curr = curr->next;
@@ -35,7 +36,6 @@ else if (index > i+1)
 
 else {
 	//pointer equals pointer next
-	prev->next = newNode;
 	newNode->next = curr;
 	printf("Node added at: ");
 	}
@@ -48,7 +48,6 @@ else {
 
 //to test
 int main() {
-	i=0;
 	head = NULL;
 	Insert(7,1);
 	Insert(5,2);
