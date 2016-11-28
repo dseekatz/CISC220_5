@@ -16,8 +16,7 @@ struct Node *head; //Assign head as start of linked list
 void insert(int index, int data) { //union Data data) {
 	Node* curr;
 	curr = 0;
-	Node* newNode;
-	//newNode.data; 
+	Node* newNode; 
 
 //initialize current pointer to head
 int i = 0; //start at first element in linked list and traverse
@@ -30,6 +29,7 @@ if(head != NULL) { //as long as there is a linked list
 
 if(curr == 0) {
 //add at head (position 0 is start of the linked list)
+newNode->next = head;
 }
 else if (index > i+1)
 	printf("Invalid boundaries"); 
@@ -37,7 +37,7 @@ else if (index > i+1)
 else {
 	//pointer equals pointer next
 	newNode->next = curr;
-	printf("Node added at: ");
+	//add some print statements or no?
 	}
 }
 else {
