@@ -5,7 +5,8 @@
  * as well as four functions to manipulate doubly linked lists
  */
 
-/* Union definition for data to be stored in node structure */
+/* Union definition for data to be stored in node structure
+ * Move this to udll.h */
 union Data {
 	int d;
 	int* ptrd;
@@ -30,11 +31,14 @@ typedef struct Node Node;
  */
 /* Please move these definitions to main.c before assignment submission */
 Node head = {NULL,{2},NULL};
-Node last = {&head,{0},NULL};
+Node last = {NULL,{0},NULL};
+
+/* length function */
+int length() {
+	return head.data.d;
+} // end length
 
 /* The main function should be moved to main.c before assignment submission */
 int main() {
-	head.next = &last;
-	printf("%d\n", head.data.d);
-	printf("%d\n", last.data.d);
+	
 } /* End main */
