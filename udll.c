@@ -2,8 +2,7 @@
 #include<stdio.h>
 
 /* This file defines the node structure for a doubly linked list
- * as well as four functions to manipulate doubly linked lists
- */
+ * as well as four functions to manipulate doubly linked lists */
 
 /* Union definition for data to be stored in node structure
  * Move this to udll.h */
