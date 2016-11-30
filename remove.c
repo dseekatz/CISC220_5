@@ -24,11 +24,34 @@ int length() {
 } // end length
 
 void remove(int index) {
-	ptr = head
-	while (ptr->next != NULL) {
+	listLength = length();
+	mid = listLength / 2;
+	int i = 0;
+	if (index <= mid) {
+		ptr = head;
+		ptr2 = head.next;
+		while (i < index) {
+			ptr = ptr.next;
+			ptr2 = ptr2.next
+		}
+		ptr2 = ptr2.next;
+		ptr.next = &ptr2;
+		ptr2.prev = &ptr;
+	}
+	else {
+		ptr = last;
+		ptr2 = last.prev;
+		while (i > index) {
+			ptr = ptr.prev;
+			ptr2 = ptr2.prev
+		}
+		ptr2 = ptr2.prev;
+		ptr.prev = @ptr2
+		ptr2.next = &ptr;
 
 	}
 
+}
 int main() {
 	printf("%d\n",length());
 } /* End main */
