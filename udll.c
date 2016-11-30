@@ -3,6 +3,20 @@
 
 /* This file gives the concrete function definitions for the four required functions */
 
+/* This function inserts a node into the list at the specified index and updates the
+ * length of the list
+ */
+void insert(int index, union Data data) {
+// To be written
+} // end insert
+
+/* This function removes a node from the list at the specified index and updates the
+ * length of the list
+ */
+void remove(int index) {
+// To be written
+} // end remove
+
 /* This function returns the length of the linked list (note that the length is stored
  * in the head node)
  */
