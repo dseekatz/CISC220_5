@@ -44,6 +44,7 @@ void insert(int index, int data) { //union Data data) {
 			ptr = ptr->next;
 			i++
 		}
+	}
 		else {
 			(*ptr).ext = &newNode;
 			(*newNode).next = ptr2;
