@@ -24,34 +24,44 @@ int length() {
 } // end length
 
 void remove(int index) {
-	listLength = length();
-	mid = listLength / 2;
-	int i = 0;
-	if (index <= mid) {
-		ptr = head;
-		ptr2 = head.next;
-		while (i < index) {
-			ptr = ptr.next;
-			ptr2 = ptr2.next
-		}
-		ptr2 = ptr2.next;
+	Node* ptr = NULL;
+	Node* ptr2 = NULL;
+	int i;
+	if (index <= length() / 2) {
+		ptr = &head;
+		ptr2 = &head;
+		for (i = 0; i < index - 1; i++) {
+			ptr=(*ptr).next;
+			ptr2=(*(*ptr).next).next;
+		} // end for loop
 		ptr.next = &ptr2;
 		ptr2.prev = &ptr;
-	}
-	else {
-		ptr = last;
-		ptr2 = last.prev;
-		while (i > index) {
-			ptr = ptr.prev;
-			ptr2 = ptr2.prev
-		}
-		ptr2 = ptr2.prev;
-		ptr.prev = @ptr2
+	} else {
+		ptr = &last;
+		for (i = 0; i < length() - index; i++) {
+			ptr=(*ptr).prev;
+			ptr2=(*(*ptr).prev).prev;
+		} // end for loop
+		ptr.prev = &ptr2;
 		ptr2.next = &ptr;
+	} // end conditional
+	head.data.d--;
+} // end remove function
 
-	}
-
-}
 int main() {
-	printf("%d\n",length());
+	float floaty = 1.6275;
+	union Data n1d, n2d, n3d;
+	n1d.d = 5;
+	n2d.ptrf = &floaty;
+	n3d.c = 'y';
+	printf("%c\n",n3d.c);
+	Node n1 = {&head,n1d,NULL};
+	Node n2 = {&n1,n2d,NULL};
+	Node n3 = {&n2,n3d,&last};
+	n1.next = &n2;
+	n2.next = &n3;
+	head.data.d = 5;
+	head.next = &n1;
+	last.prev = &n3;
+
 } /* End main */
