@@ -23,7 +23,7 @@ int length() {
 	return head.data.d;
 } // end length
 
-void remove(int index) {
+void remover(int index) {
 	Node* ptr = NULL;
 	Node* ptr2 = NULL;
 	int i;
@@ -34,16 +34,16 @@ void remove(int index) {
 			ptr=(*ptr).next;
 			ptr2=(*(*ptr).next).next;
 		} // end for loop
-		ptr.next = &ptr2;
-		ptr2.prev = &ptr;
+		(*ptr).next = ptr2;
+		(*ptr2).prev = ptr;
 	} else {
 		ptr = &last;
 		for (i = 0; i < length() - index; i++) {
 			ptr=(*ptr).prev;
 			ptr2=(*(*ptr).prev).prev;
 		} // end for loop
-		ptr.prev = &ptr2;
-		ptr2.next = &ptr;
+		(*ptr).prev = ptr2;
+		(*ptr2).next = ptr;
 	} // end conditional
 	head.data.d--;
 } // end remove function
@@ -54,7 +54,6 @@ int main() {
 	n1d.d = 5;
 	n2d.ptrf = &floaty;
 	n3d.c = 'y';
-	printf("%c\n",n3d.c);
 	Node n1 = {&head,n1d,NULL};
 	Node n2 = {&n1,n2d,NULL};
 	Node n3 = {&n2,n3d,&last};
@@ -63,5 +62,6 @@ int main() {
 	head.data.d = 5;
 	head.next = &n1;
 	last.prev = &n3;
+	remover(2);
 
 } /* End main */
