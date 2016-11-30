@@ -24,12 +24,14 @@ typedef struct Node {
 	struct Node* next;
 }
 
-struct Node *head; //Assign head as start of linked list
+typedef struct Node *head; //Assign head as start of linked list
 
 void insert(int index, int data) { //union Data data) {
 	Node* ptr = new Node();
 	Node* newNode;
 	newNode.data;
+	Node* ptr = NULL;
+	Node* ptr2 = NULL;
 	
 	//find length
 	length();
