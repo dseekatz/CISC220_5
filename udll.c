@@ -24,7 +24,7 @@ union Data get(int index) {
 		return (*ptr).data;
 	} else {
 		ptr = &last;
-		for (i = 0; i < index; i++) {
+		for (i = 0; i < length() - index - 1; i++) {
 			ptr=(*ptr).prev;
 		} // end for loop
 		return (*ptr).data;

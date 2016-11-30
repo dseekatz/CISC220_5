@@ -50,7 +50,7 @@ union Data get(int index) {
 		return (*ptr).data;
 	} else {
 		ptr = &last;
-		for (i = 0; i < index; i++) {
+		for (i = 0; i < length() - index - 1; i++) {
 			ptr=(*ptr).prev;
 		} // end for loop
 		return (*ptr).data;
@@ -63,8 +63,8 @@ int main() {
 	union Data n1d, n2d, n3d;
 	n1d.d = 5;
 	n2d.ptrf = &floaty;
-	char ch = 'y';
-	n3d.c = ch;
+	n3d.c = 'y';
+	printf("%c\n",n3d.c);
 	Node n1 = {&head,n1d,NULL};
 	Node n2 = {&n1,n2d,NULL};
 	Node n3 = {&n2,n3d,&last};
