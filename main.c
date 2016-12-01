@@ -40,7 +40,7 @@ int main() {
 	printf("The length of the list is %d\n",length());
 
 	printf("Removing the node at index 2 of the list...\n");
-	remover(2);
+	removeNode(2);
 	data = get(1);
 	printf("The value stored at index 1 of the list is now %s\n",data.ptrc);
 	data = get(2);

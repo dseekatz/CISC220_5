@@ -39,7 +39,7 @@ static Node last = {NULL,0,{0},NULL};
 /* Define the four function headers */
 void insert(int index, union Data data, int type);
 
-void remover(int index);
+void removeNode(int index);
 
 union Data get(int index);
 

@@ -19,8 +19,8 @@ void insert(int index, union Data data, int type) {
                         ptr=(*ptr).next;
                         ptr2=(*ptr2).next;
                 } // end for loop
-                newNode.next = &ptr2;
-                newNode.prev = &ptr;
+                newNode.next = ptr2;
+                newNode.prev = ptr;
                 (*ptr).next = &newNode;
                 (*ptr2).prev = &newNode;
         } else {
@@ -29,8 +29,8 @@ void insert(int index, union Data data, int type) {
                         ptr=(*ptr).prev;
                         ptr2=(*(*ptr).prev).prev;
                 } // end for loop
-                newNode.next = &ptr2;
-                newNode.prev = &ptr;
+                newNode.next = ptr2;
+                newNode.prev = ptr;
                 (*ptr).next = &newNode;
                 (*ptr2).prev = &newNode;
         } // end conditional
