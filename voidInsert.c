@@ -24,15 +24,17 @@ typedef struct Node {
 	struct Node* next;
 }
 
-struct Node *head; //Assign head as start of linked list
+typedef struct Node *head; //Assign head as start of linked list
 
 void insert(int index, int data) { //union Data data) {
 	Node* ptr = new Node();
 	Node* newNode;
 	newNode.data;
+	Node* ptr = NULL;
+	Node* ptr2 = NULL;
 	
 	//find length
-	length();
+	length(); //call length function
 	int length = length/2;
 	int i = 0;
 	ptr = &head;
@@ -42,30 +44,30 @@ void insert(int index, int data) { //union Data data) {
 	if (index < length/2) {
 		while (i != index-1) {
 			ptr = ptr->next;
-			i++
+			i++;
 		}
 	}
-		else {
-			(*ptr).ext = &newNode;
-			(*newNode).next = ptr2;
-			(*newNode).prev = ptr;
-			(*ptr2).prev = newNode;
-		}
+	else {
+		(*ptr).ext = &newNode;
+		(*newNode).next = ptr2;
+		(*newNode).prev = ptr;
+		(*ptr2).prev = newNode;
 	}
+}
 	//The index is greater than length/2
 	if (index > length/2) {
 		while (i < index) {
 			ptr = ptr->next;
-			i++
+			i++;
 		}
 	}
 		else {
-			ptr.next = &newNode;
-			newNode.next = &ptr2;
-			newNode.prev = &ptr;
-			ptr2.prev = &newNode;
+			(*ptr).next = newNode;
+			(newNode).next = ptr2;
+			(newNode).prev = ptr;
+			(*ptr2).prev = newNode;
 		}
-}
+} //end voidInsert.c
 
 //to test
 int main() {
