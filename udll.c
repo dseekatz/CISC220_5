@@ -8,7 +8,11 @@
  */
 
 void insert(int index, union Data data, int type) {
-        Node newNode = {NULL, type, data, NULL};
+       
+	Node aNode = {NULL, type, data, NULL};
+	Node* newNode;
+	newNode = malloc(sizeof(aNode));
+	(*newNode) = aNode;
         Node* ptr = NULL;
         Node* ptr2 = NULL;
         int i;
@@ -19,20 +23,20 @@ void insert(int index, union Data data, int type) {
                         ptr=(*ptr).next;
                         ptr2=(*ptr2).next;
                 } // end for loop
-                newNode.next = ptr2;
-                newNode.prev = ptr;
-                (*ptr).next = &newNode;
-                (*ptr2).prev = &newNode;
+                (*newNode).next = ptr2;
+                (*newNode).prev = ptr;
+                (*ptr).next = newNode;
+                (*ptr2).prev = newNode;
         } else {
                 ptr = &last;
                 for (i = 0; i < length() - index; i++) {
                         ptr=(*ptr).prev;
                         ptr2=(*(*ptr).prev).prev;
                 } // end for loop
-                newNode.next = ptr2;
-                newNode.prev = ptr;
-                (*ptr).next = &newNode;
-                (*ptr2).prev = &newNode;
+                (*newNode).next = ptr2;
+                (*newNode).prev = ptr;
+                (*ptr).next = newNode;
+                (*ptr2).prev = newNode;
         } // end conditional
         head.data.d++;
 } // end insert function
