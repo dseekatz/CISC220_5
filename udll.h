@@ -2,6 +2,11 @@
 #define UDLL_H
 #include<stdlib.h>
 
+//David Seekatz				16das4 20037710
+//Sean Eylott				13se18 10141657
+//Simon Ungar        			14seau 10149546
+//Brooke Resendes   			13brr2 10141112
+
 /* This file defines the node structure for a doubly linked list
  * and provides the function headers for the four required functions
  */
@@ -36,7 +41,7 @@ typedef struct Node Node;
 static Node head = {NULL,0,{2},NULL};
 static Node last = {NULL,0,{0},NULL};
 
-/* Define the four function headers */
+/* Declare the four function headers */
 void insert(int index, union Data data, int type);
 
 void removeNode(int index);
