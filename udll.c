@@ -13,6 +13,10 @@ void insert(int index, union Data data, int type) {
 	Node* newNode;
 	newNode = malloc(sizeof(aNode));
 	(*newNode) = aNode;
+	if (head.next == NULL) {
+		head.next = newNode;
+		last.prev = newNode;
+	} // end conditional
         Node* ptr = NULL;
         Node* ptr2 = NULL;
         int i;
