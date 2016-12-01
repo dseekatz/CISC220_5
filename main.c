@@ -3,5 +3,43 @@
 
 /* The main function for testing the four linked list function */
 int main() {
-	//
+	printf("This is the test function.\n\n");
+
+	printf("Adding an integer of value 9 at index 1...\n");
+	union Data data;
+	int myint = 9;
+	data.d = myint;
+	int type = 0;
+	int index = 1;
+	insert(index, data, type);
+	data = get(1);
+	printf("The value stored at index 1 of the list is %d\n",data.d);
+	printf("The length of the list is %d\n",length());
+
+	printf("Adding an integer pointer at index 2... \n");
+	data.ptrd = &myint;
+	type = 1;
+	index = 2;
+	insert(index, data, type);
+	data = get(2);
+	printf("The value stored at index 2 of the list is %p\n",data.ptrd);
+	printf("The length of the list is %d\n",length());
+
+	printf("Adding a string containing 'abc'  at index 1...\n");
+	char* mystring = "abc";
+	data.ptrc = mystring;
+	type = 5;
+	index = 1;
+	insert(index, data, type;
+	data = get(1);
+	printf("The value stored at index 1 of the list is %s\n",data.ptrc);
+	printf("The length of the list is %d\n",length());
+
+	printf("Removing the node at index 2 of the list...\n");
+	remover(2);
+	data = get(1);
+	printf("The value stored at index 1 of the list is now %s\n",data.ptrc);
+	data = get(2);
+	printf("The value stored at index 2 of the list is now %p\n",data.ptrd);
+	printf("The length of the list is now %d\n",length());
 } // end main
