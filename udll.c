@@ -1,6 +1,11 @@
 #include<stdlib.h>
 #include "udll.h"
 
+//David Seekatz				16das4 20037710
+//Sean Eylott				13se18 10141657
+//Simon Ungar        			14seau 10149546
+//Brooke Resendes   			13brr2 10141112
+
 /* This file gives the concrete function definitions for the four required functions */
 
 /* This function inserts a node into the list at the specified index and updates the
