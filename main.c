@@ -42,4 +42,6 @@ int main() {
 	data = get(2);
 	printf("The value stored at index 2 of the list is now %p\n",data.ptrd);
 	printf("The length of the list is now %d\n",length());
+	
+	return 0;
 } // end main
