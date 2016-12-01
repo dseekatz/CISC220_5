@@ -6,14 +6,14 @@
 /* This function inserts a node into the list at the specified index and updates the
  * length of the list
  */
-void insert(int index, union Data data) {
+void insert(int index, union Data data, int type) {
 // To be written
 } // end insert
 
 /* This function removes a node from the list at the specified index and updates the
  * length of the list
  */
-void remove(int index) {
+void remover(int index) {
 // To be written
 } // end remove
 

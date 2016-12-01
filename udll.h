@@ -15,8 +15,15 @@ union Data {
 }; /* End union */
 
 /* Linked list node structure */
+// type = 0 : union stores int
+// type = 1 : union stores int*
+// type = 2 : union stores float
+// type = 3 : union stores float*
+// type = 4 : union stores char
+// type = 5 : union stores char*
 struct Node {
 	struct Node* prev;
+	int type;
 	union Data data;
 	struct Node* next;
 }; /* End structure */
@@ -25,13 +32,13 @@ struct Node {
 typedef struct Node Node;
 
 /* Define head and last nodes */
-Node head = {NULL,{2},NULL};
-Node last = {NULL,{0},NULL};
+Node head = {NULL,0,{2},NULL};
+Node last = {NULL,0,{0},NULL};
 
 /* Define the four function headers */
-void insert(int index, union Data data);
+void insert(int index, union Data data, int type);
 
-void remove(int index);
+void remover(int index);
 
 union Data get(int index);
 
