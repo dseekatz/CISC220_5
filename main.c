@@ -1,9 +1,13 @@
 #include<stdlib.h>
-#include <stdio.h>
+#include<stdio.h>
+#include "udll.h" 
 
 /* The main function for testing the four linked list function */
 int main() {
 	printf("This is the test function.\n\n");
+	
+	printf("The value stored in the head node is %d\n",head.data.d);
+	printf("The value stored in the last node is %d\n",last.data.d);
 
 	printf("Adding an integer of value 9 at index 1...\n");
 	union Data data;
@@ -30,7 +34,7 @@ int main() {
 	data.ptrc = mystring;
 	type = 5;
 	index = 1;
-	insert(index, data, type;
+	insert(index, data, type);
 	data = get(1);
 	printf("The value stored at index 1 of the list is %s\n",data.ptrc);
 	printf("The length of the list is %d\n",length());
