@@ -2,6 +2,11 @@
 #include<stdio.h>
 #include "udll.h" 
 
+//David Seekatz				16das4 20037710
+//Sean Eylott				13se18 10141657
+//Simon Ungar        			14seau 10149546
+//Brooke Resendes   			13brr2 10141112
+
 /* The main function for testing the four linked list function */
 int main() {
 	printf("This is the test function.\n\n");
